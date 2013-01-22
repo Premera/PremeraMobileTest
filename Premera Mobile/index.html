@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title></title>
@@ -6,13 +6,13 @@
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
-        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <script src="scripts/hello-world.js"></script>
+        <!--<script src="scripts/hello-world.js"></script>-->
 
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
     </head>
-    <body>
+    
+    <!--<body>
         <div data-role="view" id="tabstrip-home" data-title="Hello World!">
             <h1>Welcome!</h1>
             <p>
@@ -63,5 +63,123 @@
         <script>
             var app = new kendo.mobile.Application(document.body, { transition: "slide", layout: "mobile-tabstrip" });
         </script>
-    </body>
+    </body>-->
+    
+    
+    
+    <body>
+      
+
+        
+   
+        
+
+        
+
+
+        
+    <div data-role="view" data-title="Destinations" id="listview-home">   
+        
+        
+  
+        
+        
+    <ul data-role="listview" data-style="inset" data-type="group">
+        <li>
+            Welcome to Premera mobile!
+
+            <ul>
+                 <li data-icon="globe">
+                     <div class="nav">
+                         <a href="login.html">LogOn</a>
+                     </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>Find a Doctor Test</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>Contact Us</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>Funding Accounts</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>Careers</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>Terms & Conditions</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>Privacy Policy</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>View Full Website</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li data-icon="globe"><a>... More</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<style>
+    .km-ios #listview-home .km-content {
+        /*background: url(../../content/shared/images/patterns/pattern2.png);
+        box-shadow: inset 0 0 30px #95764D;
+        -webkit-box-shadow: inset 0 0 30px #95764D;*/
+    }
+    .km-ios #listview-home .km-listview .km-list {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        box-shadow: 0 1px 5px #95764D;
+        -webkit-box-shadow: 0 1px 5px #95764D;
+    }
+    .km-ios #listview-home .km-listview .km-list > li {
+        border: none;
+    }
+    .km-ios #listview-home .km-listview .km-list > li:last-child {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .km-ios #listview-home .km-navbar {
+        /*background: url(../../content/shared/images/patterns/pattern9.png);*/
+    }
+    .km-tablet .km-ios #listview-home .km-view-title {
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+    .km-ios #listview-home .km-navbar .km-button
+    {
+        background-color: #974d2e;
+    }
+
+</style>
+
+
+<script>
+    var app = new kendo.mobile.Application(document.body);
+</script>
+</body>
+    
+    
+    
+    
+    
 </html>
