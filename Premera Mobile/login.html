@@ -1,165 +1,71 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta charset="utf-8" />
-        <script src="cordova.js"></script>
-        <script src="kendo/js/jquery.min.js"></script>
-        <script src="kendo/js/kendo.mobile.min.js"></script>
-        <script src="scripts/hello-world.js"></script>
-
-        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-        <link href="styles/main.css" rel="stylesheet" />
-    </head>
-
-    <head>
-        <title>Log In</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhoneGap App Starter</title>
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+    <link rel="stylesheet" href="sasquach.css" />
+    <script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-current.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
     
-    <body>
-        
-        Welcome to the Premera mobile app - more test!
-        
-         <div class="ui-page ui-body-c ui-page-active">
-        
-            <div id="content" class="ui-content">
-           
-	            <div class="ui-body gradiantbox ui-corner-all ">
-        
-                    <form action="" method="post">
-                        
-			            <fieldset>
-                            
-                             <a href="index.html">Home</a>
-                            
-                            <h2 class="touppercase">LogOn</h2>
-                        
-                            <div class="hp-form-div">
-                                
-                                <label for="UserName">User Name test </label>
-                                <div>
-                                    <input data-val="true" data-val-required="The User Name field is required." id="UserName" name="UserName" type="text" value="" />
-                                </div>
-                            </div>
-                            
-                            <div class="hp-form-div">
-                                
-                                <label for="Password">Password</label>
-                                <div>
-                                    <input data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
-                                </div>
-                            </div>
-                            
-                            <div class="hp-form-div">
-                                
-                                <input data-val="true" data-val-required="The Remember User Name? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
-                                <label for="RememberMe">Remember User Name?</label>
-                            </div>
-                            
-                            <div style="height: 10px;">
-                            
-                            </div>
-                            
-                            <div class="center">
-                                
-                              
-                                <input class="login_button" type="submit" value="Secure Member Log In" /> 
-                            </div>
-                            
-                            <button id="ajax">ajax call</button>
-                                        
-                            <button id="json">json call</button>
-                            
-                            <script type="text/javascript">
-                                $('#json').click(function(){ 
-                                    alert('json call last update');
-                                     $.getJSON("https://api.premera.com/Member/Benefits/Benefits.svc/MemberData?lob=Premera",
-                                     function(data) {
-                                        alert(data);         
-                                      });   
-                                });
-                                
-                                
-                                
-                                function make_base_auth(user, password) {
-                                      var tok = user + ':' + pass;
-                                      var hash = Base64.encode(tok);
-                                      return "Basic " + hash;
-                                      }
+    <script type="text/javascript" charset="utf-8" src="logon.js"></script>
 
-                            
-                                $('#ajax').click(function(){ 
-                                    alert('ajax');
-                                     $.ajax({ 
-                                         type: "GET",
-                                         dataType: "json",
-                                         headers: {"Content-Type" : "application/json"},
-                                         username: 'ionduican',
-                                         password: 'Premera2012',
-                                         crossDomain: false,
-                                         url: "https://api.premera.com/Member/Benefits/Benefits.svc/MemberData?lob=Premera",
-                                         success: function(){        
-                                            alert('success');
-                                             }
-                                         });
-                                     });
-                                
-                                
-                                
-                                
-                                /*$('#ajax').click(function(){ 
-                                    alert('ajax');
-                                     $.ajax({ 
-                                         type: "GET",
-                                         dataType: "xml",
-                                         url: "http://localhost/Service1.svc/RestApiTest",
-                                         success: function(data){        
-                                            alert(data);
-                                         }
-                                         });*/
-                                
-                            
-                            </script>
-                            
-			            </fieldset>
-                        
-	                </form>
- 
-                    <div>
-                            
-                     Forgot your user name or need to register?
-                    <br />
-                    Visit the <a href="https://www.premera.com/portals/login.aspx/?MobileFullSiteRequest=true" rel="external">Full Site</a>
-                
-                    </div>
-                    
-	            </div>
-    
-                <a href="#" onclick="javascript:alert('Your log in username and password matches the one you created for premera.com/portals/login.aspx/?MobileFullSiteRequest=true. If you have not registered, register at https://www.premera.com/portals/login.aspx/?MobileFullSiteRequest=true or call customer service 1-800-722-1471.');return false;">
-                    <span class="hp-help ui-icon-question"></span>
-                </a>
-         
-            </div>
-       
-            <div class="floatmiddlecontainer">
-                
-                <a href="https://m.premera.com/secure/premera/Home/TermsAndConditions">Terms &amp; Conditions</a> | 
-                <a href="https://m.premera.com/secure/premera/Home/Privacy">Privacy</a> 
-            
-            </div>
-        
-            <div class="floatmiddlecontainer hp-copyright">Copyright &copy; 2013   
-                        Premera Blue Cross 
-            
-            </div>
-            
-            <div data-role="footer">
-                
-             
-                <h4></h4>
-            </div>   
-        </div> 
-   
-    </body>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("backbutton", onBackButton, false);
 
+        function onDeviceReady() {
+            console.log("onDeviceReady. You should see this message in Visual Studio's output window.");
+        }
+
+        function onBackButton() {
+            console.log("onBackButton");
+        }
+    </script>
+</head>
+<body class="ui-mobile-viewport">
+    <div data-role="page">
+        <div data-role="header" class="ui-header" data-position="inline">
+            <div class="logo-container" data-position="inline">
+                <img src="images/premera-name.png" alt="logo" />
+            </div>
+            <a href="index.html" data-role="button" data-icon="home" data-theme="b" data-iconpos="notext">
+            </a>
+        </div>
+        <div data-role="content">
+            <h1>
+                Log In
+            </h1>
+            <div class="ui-body ui-body-b">
+                <form action="" method="post">
+                <div data-role="fieldcontain" class="ui-hide-label">
+                    <label for="userID">
+                        User ID:</label>
+                    <input type="text" name="userID" id="userID" value="" placeholder="User ID" />
+                </div>
+                <div data-role="fieldcontain" class="ui-hide-label">
+                    <label for="password">
+                        Username:</label>
+                    <input type="text" name="password" id="password" value="" placeholder="Password" />
+                </div>
+                <div data-role="fieldcontain" class="ui-hide-label">
+                    <fieldset data-role="controlgroup">
+                        <legend>Remeber User ID:</legend>
+                        <input data-theme="c" type="checkbox" name="checkbox-agree" id="checkbox-agree" class="custom" />
+                        <label for="checkbox-agree">
+                            Remeber User ID</label>
+                    </fieldset>
+                </div>
+                <input type="submit" data-theme="b" value="Secure Log In" onclick="logOnMobile()" />
+                </form>
+            </div>
+            <a href="https://www.premera.com/portals/Member/Account/Create" data-role="button"
+                rel="external">Create New Account</a> <a href="https://www.premera.com/portals/Member/Account/Forgotten"
+                    data-role="button" rel="external">Forgot your User ID or Password</a>
+        </div>
+    </div>
+</body>
 </html>

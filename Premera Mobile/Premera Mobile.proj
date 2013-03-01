@@ -28,6 +28,7 @@
     <Folder Include="App_Resources\Android\drawable-ldpi">
       <Platform>Android</Platform>
     </Folder>
+    <Folder Include="Images" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\iOS\icon.png" />
@@ -52,7 +53,27 @@
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contact.html" />
+    <Content Include="cordova-2.3.0.js" />
+    <Content Include="cordova-current.js" />
+    <Content Include="discounts.html" />
+    <Content Include="findadoctor.html" />
+    <Content Include="footer.html" />
+    <Content Include="header.html" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\icons-18-black.png" />
+    <Content Include="Images\icons-18-white.png" />
+    <Content Include="Images\icons-36-black.png" />
+    <Content Include="Images\icons-36-white.png" />
+    <Content Include="Images\premera-name.png" />
     <Content Include="index.html" />
+    <Content Include="javascript.js" />
+    <Content Include="jquery-1.9.0.js" />
+    <Content Include="jquery.js" />
+    <Content Include="jquery.mobile-1.2.0.css" />
+    <Content Include="jquery.mobile-1.2.0.js" />
+    <Content Include="jquery.mobile-1.2.0.min.css" />
+    <Content Include="jquery.mobile-1.2.0.min.js" />
     <Content Include="kendo\js\jquery.min.js" />
     <Content Include="kendo\js\kendo.mobile.min.js" />
     <Content Include="kendo\styles\images\back.png" />
@@ -60,6 +81,9 @@
     <Content Include="kendo\styles\images\KendoUI.woff" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="login.html" />
+    <Content Include="logOn.js" />
+    <Content Include="master.css" />
+    <Content Include="sasquach.css" />
     <Content Include="scripts\hello-world.js" />
     <Content Include="styles\main.css" />
     <Content Include="cordova.ios.js">
